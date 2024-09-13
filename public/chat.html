@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>PCA</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="client.js" defer></script>
+    <script src="chat/read.js" defer></script>
+		<script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+  </head>
+  
+  <body id="chat" class="chat">
+		<div id="optionBar">
+			<ul>
+				<li><a href="https://5237ddd7-d51b-473e-9341-e34fdaa8d051-00-5jionvjpjf38.kirk.replit.dev:8080/" class="navBar">&#8592;Back</a></li>
+			</ul> 
+			<div id="roomDiv">
+				<p id="room">PCA</p>
+			</div>
+			<div id="bgImp">
+				<label id="bgImg" for="bgChoice">Background</label>
+				<input id="bgChoice" type="file">
+			</div>
+		</div>
+		<div id="bigDiv">			
+		</div>		
+		<div class="form">			
+			<form class="form" method="POST" id="sender">				
+				<input autocomplete="off" required placeholder="Send a message" id="message" name="Message" type="text">				
+				<button style="display:none" type="submit">Send</button>
+			</form>
+		</div>	
+		<script>
+			document.getElementById("room").innerHTML = "PCA - " + sessionStorage.getItem("Chat");
+		</script>
+  </body>
+</html>
